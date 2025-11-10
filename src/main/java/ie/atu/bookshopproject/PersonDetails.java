@@ -19,7 +19,6 @@ public class PersonDetails {
     private int age;
     @NotBlank(message = "email blank")
     @Email(message = "please enter valid email")
-    @Pattern(regexp = "^[A-Za-z0-9+_.-]+@(.+)$", message = "Invalid email format")
     private String email;
     @NotBlank(message = "address blank")
     private String address;
