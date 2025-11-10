@@ -1,12 +1,20 @@
 package ie.atu.bookshopproject;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Entity
+@Table(name = "Login")
+@Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class PersonDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @Size(min = 1, max = 20, message = "larger than 20 characters or blank")
     @NotBlank
     private  String username;
