@@ -48,7 +48,7 @@ public class LoginController {
             if(login.getUsername().equals(personDetails.getUsername())) {
                 for (PersonDetails personDetail : PersonList) {
                     if (personDetail.getUsername().equals(personDetails.getUsername())) {
-                        return new PersonDetails(personDetail.getUsername(),"Username Details already entered","",0,"","","");
+                        return new PersonDetails(personDetails.getUsername(),"Username Details already entered","",0,"","","");
                     }
                 }
 
